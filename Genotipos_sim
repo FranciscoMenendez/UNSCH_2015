@@ -1,0 +1,24 @@
+score2 <- NULL
+set.seed(9)
+Loci1 <- NULL
+Loci2 <- NULL
+Loci3 <- NULL
+Loci4 <- NULL
+Loci5 <- NULL
+
+for (i in 1:50) {
+  Loci1 <- append(Loci1, paste(sample(seq(from = 230, to=330,  by=3), 2, replace = T, prob = dnorm(1:34, 280, 50)), collapse = '/'))
+  }
+for (i in 1:50) {
+  Loci2 <- append(Loci2, paste(sample(seq(from = 130, to=230, by=3), 2, replace = T, prob = dnorm(1:34, 180, 30)), collapse = '/'))
+  }
+for (i in 1:50) {
+  Loci3 <- append(Loci3, paste(sample(seq(from = 245, to=350, by=2), 2, replace = T, prob = dnorm(1:53, 280, 20)), collapse = '/'))
+  }
+for (i in 1:50) {
+  Loci4 <- append(Loci4, paste(sample(seq(from = 220, to=330,  by=2), 2, replace = T, prob = dnorm(1:56, 280, 50)), collapse = '/'))
+  }
+for (i in 1:50) {
+  Loci5 <- append(Loci5, paste(sample(seq(from = 230, to=330,  by=3), 2, replace = T, prob = dnorm(1:34, 280, 50)), collapse = '/'))
+  }
+score2 <- data.frame(Loci1, Loci2, Loci3, Loci4, Loci5, stringsAsFactors = F)
